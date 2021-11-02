@@ -1,3 +1,3 @@
-# NodeCrashCourse
+# Node Crash Course
 
-Oh, no! I have to learn Node! Thanks, [TraversyMedia](https://youtu.be/fBNz5xF-Kx4).
+Oh, no! I have to learn Node! Thanks, [Traversy Media](https://youtu.be/fBNz5xF-Kx4).
