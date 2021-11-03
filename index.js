@@ -3,19 +3,24 @@ const path = require("path");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
-	if (req.url === "/") {
-		fs.readFile(path.join(__dirname, "public/index.html"), (err, data) => {
-			if (err) throw err;
-			res.writeHead(200, { "Content-Type": "text/html" });
-			res.end(data);
-		});
-	} else if (req.url === "/about") {
-		fs.readFile(path.join(__dirname, "public/about.html"), (err, data) => {
-			if (err) throw err;
-			res.writeHead(200, { "Content-Type": "text/html" });
-			res.end(data);
-		});
+	let reqUrl;
+	switch (req.url) {
+		case "/":
+			reqUrl = path.join(__dirname, "public/index.html");
+			break;
+		case "/about":
+			reqUrl = path.join(__dirname, "public/about.html");
+			break;
+		default:
+			reqUrl = path.join(__dirname, "public/error.html");
+			break;
 	}
+
+	fs.readFile(reqUrl, (err, data) => {
+		if (err) throw err;
+		res.writeHead(200, { "Content-Type": "text/html" });
+		res.end(data);
+	});
 });
 
 const PORT = process.env.PORT || 5000;
