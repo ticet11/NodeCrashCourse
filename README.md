@@ -11,6 +11,10 @@ This is a simple server, built with Node.js, featuring some static HTML pages an
 - [/error](https://bk-nodecrashcourse.herokuapp.com/error) - Custom 404 page (should be triggered by any unknown path)
 - [/api/people](https://bk-nodecrashcourse.herokuapp.com/api/people) - Returns a small collection of people
 
+## Reference Folder
+
+This [reference folder](https://github.com/ticet11/NodeCrashCourse/tree/main/reference) contains examples of how several packages included with Node can be used for things like file creation and manipulation, which can be used by cloning this repo (instructions below).
+
 ## Modules Used
 
 ### Included with Node
@@ -41,5 +45,5 @@ If, for some reason, you want to run this on your own machine (assuming you alre
 
 3. Run the project (running in development mode will use nodemon, explained above)
 
-    `$ npm run start` OR 
+    `$ npm run start` OR
     `$ npm run dev`
